@@ -12,10 +12,10 @@ class ClientEvents(pymsn.event.ClientEventInterface):
         self._amsn_core.connectionStateChanged(self._client._amsn_profile, state)
         
         if state == pymsn.event.ClientState.OPEN:
-            self._client.profile.display_name = "aMSN2"
+            #self._client.profile.display_name = ""
             self._client.profile.presence = pymsn.Presence.ONLINE
-            self._client.profile.current_media = ("I listen to", "Nothing")
-            self._client.profile.personal_message = "Testing aMSN2!"
+            #self._client.profile.current_media = ("I listen to", "Nothing")
+            #self._client.profile.personal_message = "Testing aMSN2!"
 
     def on_client_error(self, error_type, error):
         print "ERROR :", error_type, " ->", error
